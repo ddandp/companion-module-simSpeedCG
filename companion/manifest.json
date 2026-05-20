@@ -1,0 +1,28 @@
+{
+  "$schema": "../node_modules/@companion-module/base/assets/manifest.schema.json",
+  "type": "connection",
+  "id": "simspeedcg-nodecg",
+  "name": "simSpeedCG NodeCG Replicants",
+  "shortname": "simSpeedCG",
+  "description": "Read and write allowlisted NodeCG Replicants from Companion",
+  "version": "0.1.0",
+  "license": "MIT",
+  "repository": "git+https://github.com/YOURUSER/companion-module-simspeedcg-nodecg.git",
+  "bugs": "https://github.com/YOURUSER/companion-module-simspeedcg-nodecg/issues",
+  "maintainers": [
+    {
+      "name": "Chris",
+      "email": "your@email.here"
+    }
+  ],
+  "runtime": {
+    "type": "node22",
+    "api": "nodejs-ipc",
+    "apiVersion": "0.0.0",
+    "entrypoint": "../dist/main.js"
+  },
+  "legacyIds": [],
+  "manufacturer": "simSpeedCG",
+  "products": ["NodeCG Replicants"],
+  "keywords": ["nodecg", "replicant", "simspeedcg"]
+}
