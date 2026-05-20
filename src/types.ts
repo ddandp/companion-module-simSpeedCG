@@ -1,44 +1,44 @@
 export type ReplicantValue =
-  | null
-  | boolean
-  | number
-  | string
-  | ReplicantValue[]
-  | {
-      [key: string]: ReplicantValue
-    }
+	| null
+	| boolean
+	| number
+	| string
+	| ReplicantValue[]
+	| {
+			[key: string]: ReplicantValue
+	  }
 
 export type ReplicantSnapshot = {
-  bundle: string
-  name: string
-  writable?: boolean
-  value: ReplicantValue
+	bundle: string
+	name: string
+	writable?: boolean
+	value: ReplicantValue
 }
 
 export type ReplicantUpdate = {
-  bundle: string
-  name: string
-  writable?: boolean
-  value: ReplicantValue
-  oldValue?: ReplicantValue
+	bundle: string
+	name: string
+	writable?: boolean
+	value: ReplicantValue
+	oldValue?: ReplicantValue
 }
 
 export type ReplicantRecord = {
-  bundle: string
-  name: string
-  writable: boolean
-  value: ReplicantValue
-  updatedAt: number
+	bundle: string
+	name: string
+	writable: boolean
+	value: ReplicantValue
+	updatedAt: number
 }
 
 export type BridgeAck<T = unknown> =
-  | {
-      ok: true
-      data?: T
-    }
-  | {
-      ok: false
-      error?: string
-    }
+	| {
+			ok: true
+			data?: T
+	  }
+	| {
+			ok: false
+			error?: string
+	  }
 
 export type LowerThirdList = Record<string, string>
