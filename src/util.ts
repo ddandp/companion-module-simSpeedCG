@@ -50,7 +50,8 @@ export function decodeReplicantChoice(value: unknown): { bundle: string; name: s
 
 function coerceToString(value: unknown): string {
 	if (typeof value === 'string') return value
-	if (typeof value === 'number' || typeof value === 'boolean' || typeof value === 'bigint') return `${value}`
+	if (typeof value === 'number' || typeof value === 'boolean') return `${value}`
+	if (typeof value === 'bigint') return String(value)
 	return ''
 }
 
